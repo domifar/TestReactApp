@@ -1,10 +1,10 @@
 import React from 'react'
 
-function OutputComponent({ input1, input2 }) {
+const OutputComponent = (props) => {
   return (
     <div>
-      <p>Eingabe 1: {input1}</p>
-      <p>Eingabe 2: {input2}</p>
+      <p>Eingabe 1: {props.input1}</p>
+      <p>Eingabe 2: {props.input2}</p>
     </div>
   )
 }
