@@ -27,10 +27,10 @@ function App() {
       {/*Component*/}
       <TestComponent text={"Bomba"}/>
       {/*Map*/}
-      <div>{array.map(asdf => <li>{asdf}</li>)}</div>
+      <div>{array.map(asdf => <li key={array.indexOf(asdf)}>{asdf}</li>)}</div>
       {/*Bild einfügen*/}
       <img src={FlowerStatus ? flower : flower2} alt="Blumenbild" />
-      <button onClick={FlowerStatus = !FlowerStatus}>Wechsle Bild</button>
+      <button onClick={() => { setFlowerStatus(!FlowerStatus) }}>Wechsle Bild</button>
     </div>
   )
 }
