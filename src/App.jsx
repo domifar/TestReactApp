@@ -17,14 +17,7 @@ function App() {
   const array = ["hallo", "servus"]
 
   //Bild
-  const [FlowerStatus, setFlowerStatus] = useState(flower)
-  const changeStatus = () => {
-    if(FlowerStatus == flower) {
-      setFlowerStatus(flower2)
-    }else {
-      setFlowerStatus(flower)
-    }
-  }
+  const [FlowerStatus, setFlowerStatus] = useState(true)
 
   return (
     <div id='container1'>
@@ -36,8 +29,8 @@ function App() {
       {/*Map*/}
       <div>{array.map(asdf => <li>{asdf}</li>)}</div>
       {/*Bild einfügen*/}
-      <img src={FlowerStatus} alt="Blumenbild" />
-      <button onClick={changeStatus}>Wechsle Bild</button>
+      <img src={FlowerStatus ? flower : flower2} alt="Blumenbild" />
+      <button onClick={FlowerStatus = !FlowerStatus}>Wechsle Bild</button>
     </div>
   )
 }
